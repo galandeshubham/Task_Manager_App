@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+<title> {% block title %} {% endblock %} </title>
+<link rel="icon" href="{% static 'k.png' %}">
+<style>
+	.nav{background-color:black;text-align:center;}
+	.nav a{color:white;text-decoration:none;padding:20px;font-size:30px}
+	*{font-size:30px;font-family:calibri;}
+</style>
+</head>
+<body bgcolor="powderblue">
+	<div class="nav">
+	{% if user.is_authenticated %}
+		<a href="{% url 'ulogout' %}">Logout</a>
+		<a href="{% url 'create' %}">Create Task</a>
+		<a href="{% url 'view' %}">View Task</a>
+		<a href="{% url 'feedback' %}">Give Feedback</a>
+	{% else %}
+		<a href="{% url 'usignup' %}">SignUp</a>
+		<a href="{% url 'ulogin' %}">Login</a>
+		<a href="{% url 'uresetpassword' %}">Reset Password</a>
+	{% endif %}
+	</div>
+<center>
+	{% block content %}
+	{% endblock %}
+</center>
+</html>

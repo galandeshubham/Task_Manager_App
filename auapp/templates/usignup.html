@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+	
+{% block title %} signup page {% endblock %}
+
+{% block content %}
+	<h2><marquee> SignUp Page </marquee></h2>
+	<form method="POST">
+	{% csrf_token %}
+	<input type="text" placeholder="enter username" name="un" required>
+	<br><br>
+	<input type="email" placeholder="enter email" name="em" required>
+	<br><br>
+	<input type="text" placeholder="enter your city" name="lo" required>
+	<br><br>
+	<input type="submit" value="SignUp">
+	</form>
+	{{ msg }}
+{% endblock %}

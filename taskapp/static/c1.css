@@ -1,0 +1,31 @@
+table {
+	width:70%;
+	border-collapse:collapse;
+	border-spacing:0;
+	background: #fafafa;
+	border-radius: 12px 12px 0 0;
+	overflow:hidden;
+      }
+
+th {
+	background:#ADFF2F;
+	text-transform:uppercase;
+	color:#800000;
+   }
+
+td {
+	font-family:Cursive;
+   }
+
+tr:nth-child(odd) {
+			background-color:#eeeeee;
+		  }
+button {
+  background-color: #FF00FF;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:40px;
+}

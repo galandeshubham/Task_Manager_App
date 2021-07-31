@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} feedback {% endblock %}
+
+{% block content %}
+	<h1><marquee> Feedback Page </marquee></h1>
+	<form method="POST">
+	{% csrf_token %}
+	<label for id="t2" style="color:red;vertical-align:top;">Enter your Feedback </label>
+	<br><br>
+	<textarea name="t2" id="t2" placeholder="write feedback here!!!" style="resize:none;" rows="5" cols="40"></textarea>
+	<br><br>
+	<input type="submit" value="save" style="border-radius:10px;border:3px solid;" >
+	</form>
+	{{ msg }}
+{% endblock %}

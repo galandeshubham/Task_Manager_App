@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} home {% endblock %}
+
+{% block content %}
+	<h1> Task Page </h1>
+	<form method="POST">
+	{% csrf_token %}
+	<label for id="t1">Task</label>
+	<textarea name="t1" id="t1" placeholder="mention your task...." style="resize:none;vertical-align:top;" rows="10" cols="25"></textarea>
+	<br><br>
+	<input type="submit" value="save" style="border-radius:10px;border:3px solid;" >
+	</form>
+	{{ msg }}
+{% endblock %}
